@@ -30,7 +30,6 @@ public class TestPracticeForm {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(email);
-        // $(byName("gender")).parent().click();
         $("label[ for='gender-radio-1']").click();
         $("#userNumber").setValue(phoneNumber);
         $("#dateOfBirthInput").click();
@@ -38,9 +37,7 @@ public class TestPracticeForm {
         $(".react-datepicker__year-select").selectOptionContainingText("1992");
         $(".react-datepicker__month-container").$(byText("28")).click();
 
-        //$(".subjects-auto-complete__input").click();
         $("#subjectsInput").sendKeys("m");
-        // $(".subjects-auto-complete__menu-list").$(byText("Maths")).click();
         $(".subjects-auto-complete__menu").$(byText("Maths")).click();
         $("label[for='hobbies-checkbox-1']").click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/photo_test.jpg"));
@@ -63,14 +60,6 @@ public class TestPracticeForm {
         $x("//td[text()='Address']/following-sibling::td").shouldHave(text(address));
         $x("//td[text()='State and City']/following-sibling::td").shouldHave(text("Delhi"));
 
-
-
-
-
-
-
-
     }
-
 
 }
