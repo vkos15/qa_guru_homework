@@ -55,7 +55,6 @@ public class TestPracticeForm extends TestBase {
                 .checkFieldInForm("Picture", FILE_PHOTO)
                 .checkFieldInForm("Address", address);
 
-
     }
 
 }

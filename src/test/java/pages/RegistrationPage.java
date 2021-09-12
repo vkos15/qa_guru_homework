@@ -40,55 +40,44 @@ public class RegistrationPage {
     }
 
     public RegistrationPage chooseGender(String usergender) {
-
         $("#genterWrapper").$(byText(usergender)).click();
         return this;
-
-
     }
 
     public void typePhoneNumber(String phoneNumber) {
         phone_number.setValue(phoneNumber);
-
     }
 
     public void selectSubject(String subject) {
         $("#subjectsInput").setValue(subject).pressEnter();
-
     }
 
     public void selectHobbyes(String hobby) {
         $("#hobbiesWrapper").$(byText(hobby)).click();
-
     }
 
     public void uploadYourPhoto(String fileName) {
         $("#uploadPicture").uploadFromClasspath(fileName);
-
     }
 
     public void typeAddress(String address) {
         $("#currentAddress").setValue(address);
-
     }
 
     public RegistrationPage selectState(String state) {
         $("#state").scrollIntoView(true).click();
         $("#stateCity-wrapper").$(byText(state)).click();
         return this;
-
     }
 
     public void selectCity(String city) {
         $("#city").scrollIntoView(true).click();
         $("#stateCity-wrapper").$(byText(city)).click();
-
     }
 
     public void submitForm() {
         $("#submit").click();
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-
     }
 
     public RegistrationPage checkFieldInForm(String nameOfField, String valueOfField) {
